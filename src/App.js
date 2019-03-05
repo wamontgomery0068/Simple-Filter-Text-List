@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import American from './Images/American.png';
+import National from './Images/National.png';
 import './App.css';
 
 class App extends Component {
@@ -43,10 +45,49 @@ class App extends Component {
     }
   }
 
+  handleChange( filter ) {
+    this.setState({ filterString: filter})
+  };
+
   render() {
+    
+    let americanToDisplay = this.state.americanLeague.filter( (element, index) => {
+      return element.includes( this.state.filterString );
+    }).map( (element, index) => {
+      return <p className = "Team_Name_Text"  key={ index }>{ element }</p>
+    })
+
+    let nationalToDisplay = this.state.nationalLeague.filter( (element, index) => {
+      return element.includes( this.state.filterString );
+    }).map( (element, index) => {
+      return <p className = "Team_Name_Text"  key={ index }>{ element }</p>
+    })
+
     return (
-      <div className="App">
-        
+      <div className="App_Container">
+        <div className = "Title_Container">
+          <p className = "Title_Text"> Major League Baseball Teams </p>
+        </div>
+        <div className = "Content_Container">
+          <div className = "American_League_Container">
+            <img className = "American_Logo" src = { American } />
+            <input 
+              className = "American_Input" 
+              placeholder = "Enter Team Here" 
+              onChange={ (e) => this.handleChange ( e.target.value)} 
+              type = "text" />
+            <div className = "Team_Name_Container">
+              { americanToDisplay }
+            </div>
+          </div>
+          <div className = "National_League_Container">
+            <img className = "National_Logo" src = { National } />
+            <input className = "National_Input" placeholder = "Enter Team Here" />
+            <div className = "Team_Name_Container">
+              { nationalToDisplay }
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

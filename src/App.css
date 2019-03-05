@@ -1,33 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App_Container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+  
+  border: 2px solid black;
+  height: 100vh;
+  /* background-color: lightgray; */
 }
 
-.App-link {
-  color: #61dafb;
+.Title_Container {
+  display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  
+  /* border: 2px solid black; */
+  height: 10vh;
+  margin: 0.5%
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Title_Text {
+  font-size: 55px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.Content_Container {
+  display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+  
+  /* border: 2px solid black; */
+  height: 90vh;
+  margin: 0.5%
+}
+
+.American_League_Container {
+  display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+  
+  background-color: ghostwhite;
+  border-radius: 4%;
+  border: 4px solid #002E6D;
+  box-shadow: 4px 4px 4px #002E6D;
+  height: 80vh;
+  width: 20vw
+}
+
+.National_League_Container {
+  display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+  
+  background-color: ghostwhite;
+  border-radius: 4%;
+  border: 4px solid #002E6D;
+  box-shadow: 4px 4px 4px #002E6D;
+  height: 80vh;
+  width: 20vw
+}
+
+.American_Logo {
+  margin-top: 2%;
+  height: 20%;
+}
+.American_Input {
+  margin-top: 2%;
+}
+
+.National_Logo {
+  margin-top: 2%;
+  height: 20%
+}
+
+.National_Input {
+  margin-top: 2%;
+
+}
+
+.Team_Name_Container {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+  
+  margin-top: 4%;
+  background-color: ghostwhite;
+  border: 2px solid #002E6D;
+  border-radius: 4%;
+  height: 55vh;
+  width: 18vw;
+}
+
+.Team_Name_Text {
+  font-size: 14px;
+  font-weight: bold
 }
